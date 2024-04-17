@@ -1,0 +1,30 @@
+.logo {
+    padding-left: 4px;
+}
+
+.container-fluid {
+    padding: 10;
+    background-image: url("/Users/shreyareddy/Downloads/Office_hours/images/hepner-hall-zoom.png");
+    height: calc(90vh);
+}
+
+.login-container {
+    width: 30%;
+    position: relative;
+    left: 1%;
+    top: 5%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(233, 233, 233, 1) 100%);
+    /* Adjust height to fit within viewport */
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 24px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
