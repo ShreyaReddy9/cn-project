@@ -2,27 +2,20 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './styles.css'; // Import styles.css
 import './login.css'; // Import login.css
-
 function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleUsernameChange = (event) => {
-        setUsername(event.target.value);
-    };
-
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
-
     const handleSubmit = (event) => {
         event.preventDefault();
+
         // Add your login logic here
         console.log('Submitted:', { username, password });
     };
 
     return ( <
-        div className = "d-flex flex-column vh-100 justify-content-between" > { /* Utilize Bootstrap classes for flex layout and vertical height */ } <
+        div className = "d-flex flex-column vh-100 justify-content-between" >
+        <
         header className = "header" >
         <
         div className = "logo" >
@@ -34,8 +27,8 @@ function LoginPage() {
         height = "40"
         width = "176" / >
         <
-        /a> < /
-        div > <
+        /a> <
+        /div> <
         /header> <
         div className = "container-fluid d-flex flex-column align-items-center justify-content-center" >
         <
@@ -55,9 +48,11 @@ function LoginPage() {
         className = "form-control"
         id = "username"
         value = { username }
-        onChange = { handleUsernameChange }
-        /> < /
-        div > <
+        onChange = {
+            (e) => setUsername(e.target.value) }
+        required / >
+        <
+        /div> <
         div className = "form-group" >
         <
         label htmlFor = "passwordField" > Password < /label> <
@@ -65,16 +60,18 @@ function LoginPage() {
         className = "form-control"
         id = "passwordField"
         value = { password }
-        onChange = { handlePasswordChange }
-        /> < /
-        div > <
+        onChange = {
+            (e) => setPassword(e.target.value) }
+        required / >
+        <
+        /div> <
         button type = "submit"
-        className = "btn btn-primary" > Submit < /button> < /
-        form > <
-        /div> < /
-        div > <
-        /div> < /
-        div > <
+        className = "btn btn-primary" > Submit < /button> <
+        /form> <
+        /div> <
+        /div> <
+        /div> <
+        /div> <
         footer className = "footer" >
         <
         div className = "footer__info-block" >
@@ -82,10 +79,10 @@ function LoginPage() {
         div className = "copyryght-block" >
         <
         span className = "copyright" > ©2024 San Diego State University < /span> <
-        span > All Rights Reserved < /span> < /
-        div > <
-        /div> < /
-        footer > <
+        span > All Rights Reserved < /span> <
+        /div> <
+        /div> <
+        /footer> <
         /div>
     );
 }
